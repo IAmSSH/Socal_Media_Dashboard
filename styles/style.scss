@@ -1,0 +1,251 @@
+$font-primary: hsl(230, 17%, 14%);
+$font-secondary: hsl(228, 12%, 44%);
+$card-bg: hsl(227, 47%, 96%);
+$bg: hsl(0, 0%, 100%);
+$header-bg: hsl(225, 100%, 98%);
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youTube: hsl(348, 97%, 39%);
+
+$success: hsl(163, 72%, 41%);
+$failure: hsl(356, 69%, 56%);
+
+// Mobile: 375px
+// Desktop: 1440px
+
+// - Lime Green: hsl(163, 72%, 41%) -> update green
+// - Bright Red: hsl(356, 69%, 56%)  -> update red
+
+// - Facebook: hsl(208, 92%, 53%)
+// - Twitter: hsl(203, 89%, 53%)
+// - Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+// - YouTube: hsl(348, 97%, 39%)
+
+// Light Theme ----------------
+// - White (BG): hsl(0, 0%, 100%)
+// - Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
+// - Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
+// - Dark Grayish Blue (Text): hsl(228, 12%, 44%)
+// - Very Dark Blue (Text): hsl(230, 17%, 14%)
+
+// Dark Theme
+// - Very Dark Blue (BG): hsl(230, 17%, 14%)
+// - Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
+// - Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+// - Desaturated Blue (Text): hsl(228, 34%, 66%)
+// - White (Text): hsl(0, 0%, 100%)
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  // min-width: ;
+  margin: 0 auto;
+}
+
+header {
+  background: $header-bg;
+  height: 35vh;
+  margin-bottom: -5em;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+      font-weight: 700;
+      color: $font-primary;
+    }
+
+    .leading {
+      font-weight: bold;
+      color: $font-secondary;
+      font-size: 0.9rem;
+    }
+
+    .toggle-text {
+      color: grey;
+      font-weight: bold;
+    }
+  }
+}
+
+.lg-card-section {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 30px;
+
+  .card__container {
+    grid-column: span 3;
+    // background: $instagram;
+    border-radius: 0.4rem;
+
+    .padding-div {
+      padding-top: 3px;
+    }
+  }
+
+  .lg-card {
+    text-align: center;
+    padding: 30px 0 20px 0;
+    background-color: $card-bg;
+    border-radius: 0 0 0.3rem 0.3rem;
+
+    cursor: pointer;
+
+    &__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+        margin-right: 9px;
+      }
+
+      p {
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: $font-secondary;
+      }
+    }
+
+    &__number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $font-primary;
+    }
+
+    &__text {
+      margin-bottom: 25px;
+      font-size: 0.7rem;
+      letter-spacing: 0.2rem;
+      color: $font-secondary;
+    }
+
+    &__update {
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-left: 5px;
+        // color: $success;
+      }
+    }
+
+    &:hover {
+      background: darken($card-bg, 5%);
+    }
+  }
+}
+
+.overview-title {
+  margin: 50px 0 20px 0;
+  color: $font-secondary;
+}
+
+.sm-card-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 20px;
+  column-gap: 30px;
+  margin-bottom: 4em;
+  cursor: pointer;
+
+  .sm-card {
+    border-radius: 0.3rem;
+    grid-column: span 3;
+    background-color: $card-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+
+    .top-div {
+      display: flex;
+      justify-content: space-between;
+      p {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: $font-secondary;
+      }
+    }
+    .bottom-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 20px;
+
+      p {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $font-primary;
+      }
+
+      div {
+        font-size: 0.8em;
+        font-weight: bold;
+        // color: $success;
+
+        img {
+          margin-right: 3px;
+        }
+      }
+
+      .sm-update {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &:hover {
+      background: darken($card-bg, 5%);
+    }
+  }
+}
+
+.success {
+  color: $success;
+}
+
+.failure {
+  color: $failure;
+}
+
+.facebook {
+  background: $facebook;
+}
+
+.instagram {
+  background: $instagram;
+}
+
+.twitter {
+  background: $twitter;
+}
+
+.youtube {
+  background: $youTube;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

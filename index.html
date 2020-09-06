@@ -13,26 +13,222 @@
     />
 
     <title>Frontend Mentor | Social Media Dashboard</title>
-
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <h1>Just the beginning...</h1>
-    <h2>Vercel Deployment</h2>
+    <header>
+      <div class="header-content">
+        <div>
+          <h1>Social Media Dashboard</h1>
+          <div class="leading">Total Followers: 23,004</div>
+        </div>
+        <div class="toggle-text">
+          Dark Mode <span class="toggle-button">(Toggle)</span>
+        </div>
+      </div>
+    </header>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    <div class="container">
+      <section class="lg-card-section">
+        <div class="card__container facebook">
+          <div class="padding-div">
+            <div class="lg-card">
+              <div>
+                <div class="lg-card__header">
+                  <img src="images/icon-facebook.svg" alt="" />
+                  <p>@nathanf</p>
+                </div>
+                <div class="lg-card__number">1987</div>
+                <div class="lg-card__text">FOLLOWERS</div>
+                <div class="lg-card__update">
+                  <img src="/images/icon-up.svg" alt="" />
+                  <p class="success">12 Today</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__container twitter">
+          <div class="padding-div">
+            <div class="lg-card">
+              <div>
+                <div class="lg-card__header">
+                  <img
+                    style="padding-bottom: 3px"
+                    src="images/icon-twitter.svg"
+                    alt=""
+                  />
+                  <p>@nathanf</p>
+                </div>
+                <div class="lg-card__number">1044</div>
+                <div class="lg-card__text">FOLLOWERS</div>
+                <div class="lg-card__update">
+                  <img src="/images/icon-up.svg" alt="" />
+                  <p class="success">99 Today</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__container instagram">
+          <div class="padding-div">
+            <div class="lg-card">
+              <div>
+                <div class="lg-card__header">
+                  <img src="images/icon-instagram.svg" alt="" />
+                  <p>@realnathanf</p>
+                </div>
+                <div class="lg-card__number">11k</div>
+                <div class="lg-card__text">FOLLOWERS</div>
+                <div class="lg-card__update">
+                  <img src="/images/icon-up.svg" alt="" />
+                  <p class="success">1099 Today</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__container youtube">
+          <div class="padding-div">
+            <div class="lg-card">
+              <div>
+                <div class="lg-card__header">
+                  <img src="images/icon-youtube.svg" alt="" />
+                  <p>Nathan F.</p>
+                </div>
+                <div class="lg-card__number">8239</div>
+                <div class="lg-card__text">SUBSCRIBERS</div>
+                <div class="lg-card__update">
+                  <img src="/images/icon-down.svg" alt="" />
+                  <p class="failure">144 Today</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="overview-title">Overview - Today</h2>
+
+      <section class="sm-card-container">
+        <div class="sm-card">
+          <div class="top-div">
+            <p>Page Views</p>
+            <img src="images/icon-facebook.svg" alt="" />
+          </div>
+          <div class="bottom-div">
+            <p>87</p>
+            <div class="sm-update success">
+              <img src="images/icon-up.svg" alt="" /> 3%
+            </div>
+          </div>
+        </div>
+
+        <div class="sm-card">
+          <div class="top-div">
+            <p>Likes</p>
+            <img src="images/icon-facebook.svg" alt="" />
+          </div>
+          <div class="bottom-div">
+            <p>52</p>
+            <div class="sm-update failure">
+              <img src="images/icon-down.svg" alt="" /> 2%
+            </div>
+          </div>
+        </div>
+
+        <div class="sm-card">
+          <div class="top-div">
+            <p>Likes</p>
+            <img src="images/icon-instagram.svg" alt="" />
+          </div>
+          <div class="bottom-div">
+            <p>5462</p>
+            <div class="sm-update success">
+              <img src="images/icon-up.svg" alt="" /> 2257%
+            </div>
+          </div>
+        </div>
+
+        <div class="sm-card">
+          <div class="top-div">
+            <p>Profile Views</p>
+            <img src="images/icon-instagram.svg" alt="" />
+          </div>
+          <div class="bottom-div">
+            <p>52k</p>
+            <div class="sm-update success">
+              <img src="images/icon-up.svg" alt="" /> 1375%
+            </div>
+          </div>
+        </div>
+
+        <div class="sm-card">
+          <div class="top-div">
+            <p>Retweets</p>
+            <img src="images/icon-twitter.svg" alt="" />
+          </div>
+          <div class="bottom-div">
+            <p>117</p>
+            <div class="sm-update success">
+              <img src="images/icon-up.svg" alt="" /> 303%
+            </div>
+          </div>
+        </div>
+
+        <div class="sm-card">
+          <div class="top-div">
+            <p>Likes</p>
+            <img src="images/icon-twitter.svg" alt="" />
+          </div>
+          <div class="bottom-div">
+            <p>507</p>
+            <div class="sm-update success">
+              <img src="images/icon-up.svg" alt="" /> 553%
+            </div>
+          </div>
+        </div>
+
+        <div class="sm-card">
+          <div class="top-div">
+            <p>Likes</p>
+            <img src="images/icon-youtube.svg" alt="" />
+          </div>
+          <div class="bottom-div">
+            <p>107</p>
+            <div class="sm-update failure">
+              <img src="images/icon-down.svg" alt="" /> 19%
+            </div>
+          </div>
+        </div>
+
+        <div class="sm-card">
+          <div class="top-div">
+            <p>Total Views</p>
+            <img src="images/icon-youtube.svg" alt="" />
+          </div>
+          <div class="bottom-div">
+            <p>1407</p>
+            <div class="sm-update failure">
+              <img src="images/icon-down.svg" alt="" /> 12%
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/IAmSSH/Socal_Media_Dashboard">IAmSSH</a>.
+      </div>
     </div>
   </body>
 </html>
