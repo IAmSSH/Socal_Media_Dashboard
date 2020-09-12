@@ -1,0 +1,53 @@
+@import "variables";
+
+.light-theme__bg {
+  background: $light-theme__bg;
+}
+
+.light-theme__header {
+  background: $light-theme__header-bg;
+}
+
+.light-theme__card {
+  background: $light-theme__card-bg;
+  &:hover {
+    background-color: darken($light-theme__card-bg, 5%);
+  }
+}
+
+.light-theme__text-dark {
+  color: $light-theme__font-dark;
+}
+
+.light-theme__text-light {
+  color: $light-theme__font-light;
+}
+
+// ======================
+
+.dark-theme__bg {
+  background: $dark-theme__bg;
+}
+
+.dark-theme__header {
+  background: $dark-theme__header-bg;
+}
+
+.blue {
+  color: blue;
+}
+
+.dark-theme__card {
+  background: $dark-theme__card-bg;
+  &:hover {
+    background-color: lighten($dark-theme__card-bg, 5%);
+  }
+}
+
+.dark-theme__text-dark {
+  color: $dark-theme__font-dark;
+}
+
+.dark-theme__text-light {
+  color: $dark-theme__font-light;
+}

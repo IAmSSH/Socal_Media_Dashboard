@@ -19,14 +19,16 @@
     />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body>
-    <header>
+  <body class="light-theme__bg">
+    <header class="light-theme__header">
       <div class="header-content">
         <div>
-          <h1>Social Media Dashboard</h1>
-          <div class="leading">Total Followers: 23,004</div>
+          <h1 class="light-theme__text-dark">Social Media Dashboard</h1>
+          <div class="leading light-theme__text-light">
+            Total Followers: 23,004
+          </div>
         </div>
-        <div class="toggle-text">
+        <div class="toggle-text" id="di">
           Dark Mode <span class="toggle-button">(Toggle)</span>
         </div>
       </div>
@@ -36,14 +38,16 @@
       <section class="lg-card-section">
         <div class="card__container facebook">
           <div class="padding-div">
-            <div class="lg-card">
+            <div class="lg-card light-theme__card">
               <div>
                 <div class="lg-card__header">
                   <img src="images/icon-facebook.svg" alt="" />
-                  <p>@nathanf</p>
+                  <p class="light-theme__text-light">@nathanf</p>
                 </div>
-                <div class="lg-card__number">1987</div>
-                <div class="lg-card__text">FOLLOWERS</div>
+                <div class="lg-card__number light-theme__text-dark">1987</div>
+                <div class="lg-card__text light-theme__text-light">
+                  FOLLOWERS
+                </div>
                 <div class="lg-card__update">
                   <img src="/images/icon-up.svg" alt="" />
                   <p class="success">12 Today</p>
@@ -55,7 +59,7 @@
 
         <div class="card__container twitter">
           <div class="padding-div">
-            <div class="lg-card">
+            <div class="lg-card light-theme__card">
               <div>
                 <div class="lg-card__header">
                   <img
@@ -63,10 +67,12 @@
                     src="images/icon-twitter.svg"
                     alt=""
                   />
-                  <p>@nathanf</p>
+                  <p class="light-theme__text-light">@nathanf</p>
                 </div>
-                <div class="lg-card__number">1044</div>
-                <div class="lg-card__text">FOLLOWERS</div>
+                <div class="lg-card__number light-theme__text-dark">1044</div>
+                <div class="lg-card__text light-theme__text-light">
+                  FOLLOWERS
+                </div>
                 <div class="lg-card__update">
                   <img src="/images/icon-up.svg" alt="" />
                   <p class="success">99 Today</p>
@@ -78,14 +84,16 @@
 
         <div class="card__container instagram">
           <div class="padding-div">
-            <div class="lg-card">
+            <div class="lg-card light-theme__card">
               <div>
                 <div class="lg-card__header">
                   <img src="images/icon-instagram.svg" alt="" />
-                  <p>@realnathanf</p>
+                  <p class="light-theme__text-light">@realnathanf</p>
                 </div>
-                <div class="lg-card__number">11k</div>
-                <div class="lg-card__text">FOLLOWERS</div>
+                <div class="lg-card__number light-theme__text-dark">11k</div>
+                <div class="lg-card__text light-theme__text-light">
+                  FOLLOWERS
+                </div>
                 <div class="lg-card__update">
                   <img src="/images/icon-up.svg" alt="" />
                   <p class="success">1099 Today</p>
@@ -96,14 +104,16 @@
         </div>
         <div class="card__container youtube">
           <div class="padding-div">
-            <div class="lg-card">
+            <div class="lg-card light-theme__card">
               <div>
                 <div class="lg-card__header">
                   <img src="images/icon-youtube.svg" alt="" />
-                  <p>Nathan F.</p>
+                  <p class="light-theme__text-light">Nathan F.</p>
                 </div>
-                <div class="lg-card__number">8239</div>
-                <div class="lg-card__text">SUBSCRIBERS</div>
+                <div class="lg-card__number light-theme__text-dark">8239</div>
+                <div class="lg-card__text light-theme__text-light">
+                  SUBSCRIBERS
+                </div>
                 <div class="lg-card__update">
                   <img src="/images/icon-down.svg" alt="" />
                   <p class="failure">144 Today</p>
@@ -114,107 +124,109 @@
         </div>
       </section>
 
-      <h2 class="overview-title">Overview - Today</h2>
+      <h2 class="overview-title light-theme__text-light" id="overview">
+        Overview - Today
+      </h2>
 
       <section class="sm-card-container">
-        <div class="sm-card">
+        <div class="sm-card light-theme__card">
           <div class="top-div">
-            <p>Page Views</p>
+            <p class="light-theme__text-light">Page Views</p>
             <img src="images/icon-facebook.svg" alt="" />
           </div>
           <div class="bottom-div">
-            <p>87</p>
+            <p class="light-theme__text-dark">87</p>
             <div class="sm-update success">
               <img src="images/icon-up.svg" alt="" /> 3%
             </div>
           </div>
         </div>
 
-        <div class="sm-card">
+        <div class="sm-card light-theme__card">
           <div class="top-div">
-            <p>Likes</p>
+            <p class="light-theme__text-light">Likes</p>
             <img src="images/icon-facebook.svg" alt="" />
           </div>
           <div class="bottom-div">
-            <p>52</p>
+            <p class="light-theme__text-dark">52</p>
             <div class="sm-update failure">
               <img src="images/icon-down.svg" alt="" /> 2%
             </div>
           </div>
         </div>
 
-        <div class="sm-card">
+        <div class="sm-card light-theme__card">
           <div class="top-div">
-            <p>Likes</p>
+            <p class="light-theme__text-light">Likes</p>
             <img src="images/icon-instagram.svg" alt="" />
           </div>
           <div class="bottom-div">
-            <p>5462</p>
+            <p class="light-theme__text-dark">5462</p>
             <div class="sm-update success">
               <img src="images/icon-up.svg" alt="" /> 2257%
             </div>
           </div>
         </div>
 
-        <div class="sm-card">
+        <div class="sm-card light-theme__card">
           <div class="top-div">
-            <p>Profile Views</p>
+            <p class="light-theme__text-light">Profile Views</p>
             <img src="images/icon-instagram.svg" alt="" />
           </div>
           <div class="bottom-div">
-            <p>52k</p>
+            <p class="light-theme__text-dark">52k</p>
             <div class="sm-update success">
               <img src="images/icon-up.svg" alt="" /> 1375%
             </div>
           </div>
         </div>
 
-        <div class="sm-card">
+        <div class="sm-card light-theme__card">
           <div class="top-div">
-            <p>Retweets</p>
+            <p class="light-theme__text-light">Retweets</p>
             <img src="images/icon-twitter.svg" alt="" />
           </div>
           <div class="bottom-div">
-            <p>117</p>
+            <p class="light-theme__text-dark">117</p>
             <div class="sm-update success">
               <img src="images/icon-up.svg" alt="" /> 303%
             </div>
           </div>
         </div>
 
-        <div class="sm-card">
+        <div class="sm-card light-theme__card">
           <div class="top-div">
-            <p>Likes</p>
+            <p class="light-theme__text-light">Likes</p>
             <img src="images/icon-twitter.svg" alt="" />
           </div>
           <div class="bottom-div">
-            <p>507</p>
+            <p class="light-theme__text-dark">507</p>
             <div class="sm-update success">
               <img src="images/icon-up.svg" alt="" /> 553%
             </div>
           </div>
         </div>
 
-        <div class="sm-card">
+        <div class="sm-card light-theme__card">
           <div class="top-div">
-            <p>Likes</p>
+            <p class="light-theme__text-light">Likes</p>
             <img src="images/icon-youtube.svg" alt="" />
           </div>
           <div class="bottom-div">
-            <p>107</p>
+            <p class="light-theme__text-dark">107</p>
             <div class="sm-update failure">
               <img src="images/icon-down.svg" alt="" /> 19%
             </div>
           </div>
         </div>
 
-        <div class="sm-card">
+        <div class="sm-card light-theme__card">
           <div class="top-div">
-            <p>Total Views</p>
+            <p class="light-theme__text-light">Total Views</p>
             <img src="images/icon-youtube.svg" alt="" />
           </div>
           <div class="bottom-div">
-            <p>1407</p>
+            <p class="light-theme__text-dark">1407</p>
             <div class="sm-update failure">
               <img src="images/icon-down.svg" alt="" /> 12%
             </div>
@@ -230,5 +242,7 @@
         <a href="https://github.com/IAmSSH/Socal_Media_Dashboard">IAmSSH</a>.
       </div>
     </div>
+
+    <script src="JS/main.js"></script>
   </body>
 </html>
