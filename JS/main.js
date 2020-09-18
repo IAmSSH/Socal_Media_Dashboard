@@ -31,16 +31,6 @@ toggler.addEventListener("click", () => {
     ele.classList.toggle("dark-theme__text-light");
   }
 
-  for (ele of overviewTitle.classList) {
-    if (ele == "dark-theme__text-light") {
-      overviewTitle.classList.toggle("dark-theme__text-light");
-      overviewTitle.classList.toggle("dark-theme__text-dark");
-      break;
-    }
-    if (ele == "dark-theme__text-dark") {
-      overviewTitle.classList.toggle("dark-theme__text-dark");
-      overviewTitle.classList.toggle("light-theme__text-light");
-      break;
-    }
-  }
+  overviewTitle.classList.toggle("dark-theme__text-light");
+  overviewTitle.classList.toggle("dark-theme__text-dark");
 });
