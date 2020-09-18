@@ -1,6 +1,12 @@
 @import "themes";
 @import "variables";
 
+@mixin mobile {
+  @media (max-width: 1050px) {
+    @content;
+  }
+}
+
 * {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -9,13 +15,17 @@
 
 .container {
   width: 80%;
-  // min-width: ;
   margin: 0 auto;
 }
 
 header {
   height: 35vh;
   margin-bottom: -5em;
+  box-sizing: border-box;
+
+  @include mobile {
+    margin-bottom: -5.5em;
+  }
 
   .header-content {
     display: flex;
@@ -25,18 +35,49 @@ header {
     width: 80%;
     margin: 0 auto;
 
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     h1 {
       font-weight: 700;
+      @include mobile {
+        font-size: 1.3rem;
+        margin-bottom: 0.4rem;
+      }
     }
 
     .leading {
       font-weight: bold;
       font-size: 0.9rem;
+
+      @include mobile() {
+        font-size: 0.8rem;
+      }
     }
 
     .toggle-text {
       color: grey;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-right: 0.8rem;
+      }
+
+      @include mobile {
+        padding: 1rem 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
     }
   }
 }
@@ -46,8 +87,16 @@ header {
   grid-template-columns: repeat(12, 1fr);
   column-gap: 30px;
 
+  @include mobile {
+    column-gap: 0;
+  }
+
   .card__container {
     grid-column: span 3;
+    @include mobile {
+      grid-column: span 12;
+      margin-bottom: 20px;
+    }
     border-radius: 0.4rem;
 
     .padding-div {
@@ -104,7 +153,11 @@ header {
 }
 
 .overview-title {
-  margin: 50px 0 20px 0;
+  margin: 3rem 0 1.8rem 0;
+
+  @include mobile() {
+    margin: 1.5rem 0 1.3rem 0;
+  }
 }
 
 .sm-card-container {
@@ -115,6 +168,10 @@ header {
   margin-bottom: 4em;
   cursor: pointer;
 
+  @include mobile {
+    column-gap: 0;
+  }
+
   .sm-card {
     border-radius: 0.3rem;
     grid-column: span 3;
@@ -122,6 +179,10 @@ header {
     flex-direction: column;
     justify-content: space-between;
     padding: 25px;
+
+    @include mobile {
+      grid-column: span 12;
+    }
 
     .top-div {
       display: flex;
@@ -190,4 +251,77 @@ header {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.border-bottom {
+  @include mobile {
+    border-bottom: 1px solid $light-theme__font-light;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+}
+
+// ==========================================
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 29px;
+  top: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(-24px);
+  -ms-transform: translateX(-24px);
+  transform: translateX(-24px);
+}
+
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.black_switch {
+  .slider:before {
+    background-color: $dark_theme__card-bg;
+  }
 }

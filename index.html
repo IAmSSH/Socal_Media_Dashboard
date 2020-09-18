@@ -22,14 +22,19 @@
   <body class="light-theme__bg">
     <header class="light-theme__header">
       <div class="header-content">
-        <div>
+        <div class="border-bottom">
           <h1 class="light-theme__text-dark">Social Media Dashboard</h1>
           <div class="leading light-theme__text-light">
             Total Followers: 23,004
           </div>
         </div>
-        <div class="toggle-text" id="di">
-          Dark Mode <span class="toggle-button">(Toggle)</span>
+        <div class="toggle-text">
+          <p class="toggle-text__p">Dark Mode</p>
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
         </div>
       </div>
     </header>

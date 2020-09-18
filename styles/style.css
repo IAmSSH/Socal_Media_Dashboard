@@ -64,6 +64,14 @@
 header {
   height: 35vh;
   margin-bottom: -5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 1050px) {
+  header {
+    margin-bottom: -5.5em;
+  }
 }
 
 header .header-content {
@@ -81,8 +89,27 @@ header .header-content {
   margin: 0 auto;
 }
 
+@media (max-width: 1050px) {
+  header .header-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 header .header-content h1 {
   font-weight: 700;
+}
+
+@media (max-width: 1050px) {
+  header .header-content h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
 }
 
 header .header-content .leading {
@@ -90,9 +117,44 @@ header .header-content .leading {
   font-size: 0.9rem;
 }
 
+@media (max-width: 1050px) {
+  header .header-content .leading {
+    font-size: 0.8rem;
+  }
+}
+
 header .header-content .toggle-text {
   color: grey;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-content .toggle-text p {
+  margin-right: 0.8rem;
+}
+
+@media (max-width: 1050px) {
+  header .header-content .toggle-text {
+    padding: 1rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header-content .toggle-text p {
+    font-size: 0.9rem;
+  }
 }
 
 .lg-card-section {
@@ -104,9 +166,23 @@ header .header-content .toggle-text {
           column-gap: 30px;
 }
 
+@media (max-width: 1050px) {
+  .lg-card-section {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+}
+
 .lg-card-section .card__container {
   grid-column: span 3;
   border-radius: 0.4rem;
+}
+
+@media (max-width: 1050px) {
+  .lg-card-section .card__container {
+    grid-column: span 12;
+    margin-bottom: 20px;
+  }
 }
 
 .lg-card-section .card__container .padding-div {
@@ -173,7 +249,13 @@ header .header-content .toggle-text {
 }
 
 .overview-title {
-  margin: 50px 0 20px 0;
+  margin: 3rem 0 1.8rem 0;
+}
+
+@media (max-width: 1050px) {
+  .overview-title {
+    margin: 1.5rem 0 1.3rem 0;
+  }
 }
 
 .sm-card-container {
@@ -186,6 +268,13 @@ header .header-content .toggle-text {
           column-gap: 30px;
   margin-bottom: 4em;
   cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  .sm-card-container {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
 }
 
 .sm-card-container .sm-card {
@@ -202,6 +291,12 @@ header .header-content .toggle-text {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 25px;
+}
+
+@media (max-width: 1050px) {
+  .sm-card-container .sm-card {
+    grid-column: span 12;
+  }
 }
 
 .sm-card-container .sm-card .top-div {
@@ -289,5 +384,75 @@ header .header-content .toggle-text {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media (max-width: 1050px) {
+  .border-bottom {
+    border-bottom: 1px solid #63687e;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 29px;
+  top: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196f3;
+          box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(-24px);
+  transform: translateX(-24px);
+}
+
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.black_switch .slider:before {
+  background-color: #252a41;
 }
 /*# sourceMappingURL=style.css.map */
